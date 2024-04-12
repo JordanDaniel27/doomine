@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú Desplegable</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .menu__desplegable {
+        position: relative;
+        display: inline-block;
+      }
+
+      .menu__desplegable .dropdown-content {
+        display: none;
+        position: static;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .menu__desplegable.active .dropdown-content {
+        display: flex;
+        flex-direction: column;
+        gap: 5;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: flex; /* Cambiado de block a inline-block */
+      }
+
+      .dropdown-content a:hover {
+        background-color: red;
+      }
+
+      @media (min-width: 768px) {
+        .menu__desplegable .dropdown-content {
+          position: absolute;
+          display: none;
+          width: auto;
+        }
+
+        .menu__desplegable.active .dropdown-content {
+          display: block;
+        }
+
+        .menu__desplegable .dropdown-content a {
+          display: block;
+
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex gap-2">
+      <div class="menu__desplegable" onclick="toggleDropdown()">
+        <span>Opciones</span>
+        <div class="dropdown-content">
+          <a
+            href="https://www.youtube.com/watch?v=-VvlVkOGHTg&t=1526s"
+            onclick="preventDefaultAction(event)"
+          >
+            Opción 1
+          </a>
+          <a href="#" onclick="preventDefaultAction(event)">Opción 2</a>
+        </div>
+      </div>
+      <div>dsadsa</div>
+      <span>dsa</span>
+    </div>
+    <div>dadas</div>
+
+    <script>
+      function toggleDropdown() {
+        var menu = document.querySelector(".menu__desplegable");
+        menu.classList.toggle("active");
+      }
+
+      function preventDefaultAction(event) {
+        event.preventDefault();
+        var url = event.currentTarget.getAttribute("href");
+        window.location.href = url;
+      }
+    </script>
+  </body>
+</html>

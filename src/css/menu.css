@@ -1,0 +1,153 @@
+.nav {
+  background-color: #fff;
+  /* height: 100px; */
+  color: white;
+}
+/* .nav__container {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.nav__black {
+  background-color: #000000;
+}
+
+.nav__menu-text {
+  color: black;
+}
+
+@media (min-width: 1280px) {
+  .nav__menu-text {
+    color: white;
+  }
+}
+.nav__label {
+  display: block;
+  cursor: pointer;
+}
+.nav__menu {
+  position: fixed;
+  top: 0px; /* 80px */
+  bottom: 0;
+  background-color: #ffffff;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  clip-path: circle(0 at center);
+  transition: clip-path 1s ease-in-out;
+  -webkit-transition: clip-path 1s ease-in-out;
+  -moz-transition: clip-path 1s ease-in-out;
+  -ms-transition: clip-path 1s ease-in-out;
+  -o-transition: clip-path 1s ease-in-out;
+}
+
+.nav__menu-center {
+  width: 30%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1280px) {
+  .nav__menu-center {
+    width: 100%;
+  }
+}
+
+.nav__input:checked + .nav__menu {
+  clip-path: circle(100% at center);
+}
+
+.nav__input {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .nav__menu {
+    position: static;
+    top: auto;
+    bottom: auto;
+    background-color: transparent;
+    width: auto;
+    left: auto;
+    display: block;
+    justify-content: initial;
+    flex-direction: row;
+    align-items: initial;
+    clip-path: none;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+  }
+  .nav__menu .menues {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .nav__label {
+    display: none;
+  }
+}
+
+/* Collection */
+
+.collection_div a {
+  display: none;
+  position: relative;
+}
+#colecction__check:checked + .collection_div a {
+  display: flex;
+  text-decoration: underline;
+}
+
+.collection_div {
+  background-color: white;
+}
+
+@media (min-width: 1286px) {
+  .collection_div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+}
+
+.colecction__check {
+  display: none;
+}
+
+/* new arrival */
+
+.arrivals_div a {
+  display: none;
+  position: relative;
+}
+#arrivals__check:checked + .arrivals_div a {
+  display: flex;
+  text-decoration: underline;
+}
+.arrivals_div {
+  background-color: white;
+}
+
+@media (min-width: 1286px) {
+  .arrivals_div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+}
+
+.arrivals__check {
+  display: none;
+}

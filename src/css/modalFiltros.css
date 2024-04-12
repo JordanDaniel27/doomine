@@ -1,0 +1,69 @@
+.modal-filtros {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s 0.9s;
+  --transform: translateY(-100vh);
+  --transition: transform 0.8s;
+  -webkit-transition: opacity 0.6s 0.9s;
+  -moz-transition: opacity 0.6s 0.9s;
+  -ms-transition: opacity 0.6s 0.9s;
+  -o-transition: opacity 0.6s 0.9s;
+}
+
+/* S le agregar cuando se da click en abri en modal */
+.modal--show-filtro {
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity 0.6s;
+  --transform: translateY(0);
+  --transition: transform 0.8s 0.8s;
+}
+
+/* Tamaño del elemento que esta dentr del modal */
+.modal__mostrar-filtro {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90%;
+  background-color: #fff;
+  padding: 15px; /* 20px */
+  place-items: center;
+  grid-auto-columns: 100%;
+  transform: var(--transform);
+  transition: var(--transition);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+/* Cierra el modal */
+.modal__close-filtro {
+  display: inline-block;
+}
+
+/* scroll carrito */
+
+.scroll__categorias::-webkit-scrollbar {
+  width: 3px;
+  background-color: #f1f1f1;
+}
+
+.scroll__categorias::-webkit-scrollbar-thumb {
+  background-color: #151515;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}

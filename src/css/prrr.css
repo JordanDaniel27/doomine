@@ -1,0 +1,52 @@
+.navigation div div a {
+  display: none;
+}
+
+.navigation div:hover > div a {
+  display: block;
+}
+
+.navigation div div {
+  position: relative;
+}
+@media (min-width: 768px) {
+  .navigation div div {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 300px;
+    background-color: rgba(1, 1, 1, 0.7);
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+  .navigation div:hover > div {
+    display: initial;
+  }
+}
+.sa {
+  color: black;
+}
+/*  */
+.collection_div {
+  display: none;
+}
+
+.collection:hover + .collection_div {
+  display: flex;
+}
+.collection_div {
+  position: relative;
+
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .collection_div {
+    position: absolute;
+  }
+}

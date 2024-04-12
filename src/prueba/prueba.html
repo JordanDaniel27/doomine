@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: black;
+      }
+      .ul {
+        color: white;
+        position: absolute;
+        right: 0;
+        width: 300px;
+        background-color: rgba(1, 1, 1, 0.7);
+      }
+
+      .ul .li ul {
+        position: absolute;
+        top: 0;
+        right: 300px;
+      }
+
+      .ul .li:hover > ul {
+        display: initial;
+      }
+
+      @media (max-width: 950px) {
+        .ul .li ul {
+          position: relative;
+          width: 100%;
+          left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ul">
+      <div class="li">
+        <p>Colection</p>
+        <ul>
+          <li>primero</li>
+          <li>segundo</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

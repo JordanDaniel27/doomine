@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú Desplegable</title>
+    <style>
+      .menu {
+        position: relative;
+        display: inline-block;
+      }
+
+      .menu .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .menu:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .menu .dropdown-content {
+          position: static;
+          display: none;
+          width: 100%;
+        }
+
+        .menu:hover .dropdown-content {
+          display: block;
+        }
+
+        .menu:hover .dropdown-content a {
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <span>Opciones</span>
+      <div class="dropdown-content">
+        <a href="#">Opción 1</a>
+        <a href="#">Opción 2</a>
+      </div>
+    </div>
+    <div>pdad</div>
+  </body>
+</html>

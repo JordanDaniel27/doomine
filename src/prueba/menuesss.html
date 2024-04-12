@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú Desplegable</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .menu {
+        position: relative;
+        display: inline-block;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      .menu .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .menu:hover .dropdown-content {
+        display: flex;
+        flex-direction: column;
+        gap: 5;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: inline-block; /* Cambiado de block a inline-block */
+      }
+
+      .dropdown-content a:hover {
+        background-color: red;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .menu .dropdown-content {
+          position: static;
+          display: none;
+          width: auto;
+        }
+
+        .menu:hover .dropdown-content {
+          display: block;
+        }
+
+        .menu:hover .dropdown-content a {
+          display: block;
+
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex gap-2">
+      <div class="menu">
+        <span class="spa">Opciones</span>
+        <div class="dropdown-content">
+          <a href="https://www.youtube.com/watch?v=-VvlVkOGHTg&t=1526s"
+            >Opción 1</a
+          >
+          <a href="#">Opción 2</a>
+        </div>
+      </div>
+      <div>
+        <p>dassd</p>
+      </div>
+    </div>
+
+    <div>
+      <p>dsadasdasd</p>
+    </div>
+  </body>
+</html>

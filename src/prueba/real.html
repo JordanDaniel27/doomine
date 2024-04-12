@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/output.css" />
+    <link rel="stylesheet" href="../css/menu.css" />
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+  <body>
+    <header>
+      <div class="bg-bgBlack font-medium text-text14 xl:text-text18 italic">
+        <p class="text-textWhite py-5 text-center">
+          Regístrate y obtén un 20% de descuento en tu primer pedido.
+          <a href="#" class="underline font-bold"> Regístrate ahora </a>
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-7 md:grid-cols-12 grid-rows-2 xl:grid-cols-12 xl:grid-rows-1 w-11/12 mx-auto my-10 gap-5 xl:gap-0"
+      >
+        <div
+          class="col-span-5 md:col-span-9 xl:col-span-2 order-1 xl:order-1 flex items-center"
+        >
+          <a href="index.html">
+            <img src="./images/img/logo.png" alt="doomine" />
+          </a>
+        </div>
+
+        <nav
+          class="nav col-span-1 xl:col-span-7 order-3 xl:order-2 flex justify-end xl:justify-center"
+        >
+          <label for="menu" class="nav__label">
+            <img src="./images/svg/menu.svg" class="nav__img" />
+          </label>
+
+          <input type="checkbox" id="menu" class="nav__input" />
+
+          <div class="nav__menu text-textBlack w-full z-[100]">
+            <div class="flex justify-end w-full pr-10">
+              <label for="menu" class="nav__label">
+                <img src="./images/svg/close.svg" class="nav__img" />
+              </label>
+            </div>
+
+            <div>
+              <p class="font-bold text-text32 italic block lg:hidden my-5">
+                Navegar
+              </p>
+              <div class="menues flex flex-col gap-5 navigation">
+                <a class="nav__item font-normal text-text16 lg:text-text24">
+                  Categorías
+                </a>
+                <a class="nav__item font-normal text-text16 lg:text-text24">
+                  Colecciones
+                </a>
+                <a class="nav__item font-normal text-text16 lg:text-text24">
+                  New Arrivals
+                </a>
+
+                <!-- prueba -->
+                <style>
+                  .collection_div a {
+                    display: none;
+                    /* width: 150%; */
+                  }
+
+                  .dropdown__collections:hover > .collection_div a {
+                    display: flex;
+                    background-color: white;
+                    text-decoration: underline;
+                  }
+
+                  .collection_div a {
+                    position: relative;
+                    top: 20px;
+                  }
+
+                  @media (min-width: 1286px) {
+                    .collection_div {
+                      position: absolute;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 10px;
+                    }
+                  }
+                </style>
+                <div class="relative dropdown__collections">
+                  <p
+                    class="collection nav__item font-normal text-text16 lg:text-text24"
+                  >
+                    Collection
+                  </p>
+
+                  <div
+                    class="collection_div w-56 font-normal text-text20 xl:text-text24"
+                  >
+                    <a href="">Colección Summer</a>
+                    <a href="">Real Sensation</a>
+                  </div>
+                </div>
+
+                <!-- final prueba -->
+                <a class="nav__item font-normal text-text16 lg:text-text24">
+                  Contactanos
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-row gap-10 justify-center items-center xl:hidden"
+            >
+              <a href="#">
+                <img src="./images/svg/twitter.svg" alt="twitter" />
+              </a>
+
+              <a href="#">
+                <img src="./images/svg/facebook.svg" alt="facebook" />
+              </a>
+
+              <a href="#">
+                <img src="./images/svg/instagram.svg" alt="instagram" />
+              </a>
+            </div>
+          </div>
+        </nav>
+
+        <div
+          class="col-span-7 md:col-span-12 xl:col-span-2 order-4 xl:order-3 flex justify-end bg-[#CCCCCC] items-center rounded-3xl px-2 gap-2"
+        >
+          <div>
+            <img src="./images/svg/lupa.svg" alt="search" />
+          </div>
+          <input
+            type="text"
+            placeholder="Buscar"
+            class="w-full xl:max-w-sm outline-none bg-[#CCCCCC] font-medium text-text16"
+          />
+        </div>
+
+        <div
+          class="col-span-1 md:col-span-2 xl:col-span-1 order-2 xl:order-4 flex justify-end"
+        >
+          <div class="flex gap-2 justify-end items-center w-full">
+            <img
+              src="./images/svg/bag.svg"
+              alt="doomine"
+              class="cursor-pointer"
+            />
+            <img
+              src="./images/svg/perfil.svg"
+              alt="doomine"
+              class="cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

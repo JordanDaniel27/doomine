@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link href="./css/output.css" rel="stylesheet" />
+  </head>
+  <body class="flex h-screen">
+    <!-- Primer div -->
+    <div class="basis-1/2 hidden md:block font-poppins">
+      <!-- Imagen ocupando toda la altura y sin desbordar -->
+      <div
+        class="bg-[url(../images/img/summer_2.png)] bg-cover bg-center bg-no-repeat w-full h-full"
+      >
+        <h1
+          class="font-medium text-text24 xl:text-text28 py-10 bg-black bg-opacity-25 text-center text-white"
+        >
+          Doomine
+        </h1>
+      </div>
+    </div>
+
+    <!-- Segundo div -->
+    <div
+      class="w-full md:basis-1/2 text-[#151515] flex justify-center items-center font-poppins"
+    >
+      <div class="w-full md:w-4/6 flex flex-col gap-5">
+        <div class="px-4 flex flex-col gap-5 text-center md:text-left">
+          <h1 class="font-semibold text-text40 xl:text-text44">
+            Iniciar Sesión
+          </h1>
+          <p class="font-normal text-text16 xl:text-text20">
+            ¿Aún no tienes una cuenta?
+            <a
+              href="crearCuenta.html"
+              class="font-bold text-text16 xl:text-text20 text-textBlack"
+            >
+              Crea una
+            </a>
+          </p>
+        </div>
+        <div class="">
+          <form action="#" class="flex flex-col gap-5">
+            <div>
+              <input
+                type="text"
+                placeholder="Tu nombre de usuario o correo electrónico"
+                class="w-full py-5 px-4 focus:outline-none placeholder-gray-400 font-normal text-text16 xl:text-text20 border-b-[1.5px] border-gray-200"
+              />
+            </div>
+
+            <div class="relative w-full">
+              <!-- Input -->
+              <input
+                id="contrasena"
+                type="password"
+                placeholder="Contraseña"
+                class="w-full py-5 pl-4 pr-12 focus:outline-none placeholder-gray-400 font-normal text-text16 xl:text-text20 border-b-[1.5px] border-gray-200"
+              />
+              <!-- Imagen -->
+              <img
+                onclick="mostrarContrasena()"
+                src="./images/svg/pass_eyes.svg"
+                alt="password"
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
+              />
+            </div>
+
+            <div class="flex gap-3 px-4 justify-between">
+              <div class="flex items-center gap-2">
+                <input type="checkbox" id="acepto_terminos" class="w-4 h-4" />
+                <label
+                  for="acepto_terminos"
+                  class="font-normal text-text16 xl:text-text20"
+                  >Recuerdame
+                </label>
+              </div>
+
+              <div>
+                <a
+                  href="olvidasteContrasenia.html"
+                  class="font-semibold text-text16 xl:text-text20 text-textBlack"
+                  >¿Olvidaste tu contraseña?</a
+                >
+              </div>
+            </div>
+
+            <div class="px-4">
+              <input
+                type="submit"
+                value="Iniciar Sesión"
+                class="text-white bg-bgBlack w-full py-4 rounded-full cursor-pointer text-text16 xl:text-text20"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
